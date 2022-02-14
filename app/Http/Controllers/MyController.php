@@ -10,6 +10,10 @@ class MyController extends Controller
           return view('welcome');
       }
 
+      public function indexProduct(){
+          return view('products.index');
+      }
+
       public function about(){
           return view('about');
       }
@@ -32,5 +36,9 @@ class MyController extends Controller
       public function redirectURL(){
           echo "Redirect to the User Url <br>";
           return redirect('/users');
+      }
+
+      public function view(){
+          return view('products.view');
       }
 }

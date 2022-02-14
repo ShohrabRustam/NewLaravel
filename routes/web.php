@@ -59,3 +59,12 @@ Route::get('users',[MyController::class,'users']);
 // });
 
 Route::get('redirect',[MyController::class,'redirectURL']);
+
+
+// products for index 
+Route::get('products',[MyController::class,'indexProduct']);
+ 
+
+//product view page 
+
+Route::get('/products/view',[MyController::class,'view']);
