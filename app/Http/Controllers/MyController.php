@@ -11,15 +11,18 @@ class MyController extends Controller
       }
 
       public function indexProduct(){
-          return view('products.index');
+          $title = "This is the passing something to view ";
+          return view('products.index')->with('title',$title);
       }
 
       public function about(){
+          $title="Passing that text on view <br>";
           return view('about');
       }
 
       public function creater(){
-        return env('CREATER_NAME');
+          $title = "Data pass in view <br>";
+        return env('CREATER_NAME',compact('title'));
       }
 
       public function database(){
@@ -39,6 +42,8 @@ class MyController extends Controller
       }
 
       public function view(){
-          return view('products.view');
+          $creater="Rustam";
+        $title = "This is the passing something to view ";
+          return view('products.view',compact('title','creater'));
       }
 }

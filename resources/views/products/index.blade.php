@@ -8,6 +8,8 @@
 </head>
 <body>
     <h1>Products</h1>
+    {{ $title}}
+
     
 </body>
 </html>

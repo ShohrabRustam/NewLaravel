@@ -8,5 +8,7 @@
 </head>
 <body>
     <h2>Product View page </h2>
+    {{ $title}}
+    {{$creater}}
 </body>
 </html>
