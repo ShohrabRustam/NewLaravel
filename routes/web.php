@@ -68,3 +68,5 @@ Route::get('products',[MyController::class,'indexProduct']);
 //product view page 
 
 Route::get('/products/view',[MyController::class,'view']);
+
+Route::get('/products/{name}',[MyController::class,'show']);

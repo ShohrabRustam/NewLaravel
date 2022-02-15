@@ -46,4 +46,14 @@ class MyController extends Controller
         $title = "This is the passing something to view ";
           return view('products.view',compact('title','creater'));
       }
+
+      public function show($name){
+          $data = [
+              'iphone'=>'Iphone',
+              'samsung'=>'Samsung'
+          ];
+          return view('products.index',[
+              'products'=>$data[$name] ?? 'products '.$name." does not exit"
+          ]);
+      }
 }
