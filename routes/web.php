@@ -62,7 +62,7 @@ Route::get('redirect',[MyController::class,'redirectURL']);
 
 
 // products for index 
-Route::get('products',[MyController::class,'indexProduct']);
+Route::get('/products',[MyController::class,'indexProduct']);
  
 
 //product view page 
@@ -70,3 +70,8 @@ Route::get('products',[MyController::class,'indexProduct']);
 Route::get('/products/view',[MyController::class,'view']);
 
 Route::get('/products/{name}',[MyController::class,'show']);
+
+//pattern integer
+Route::get('/products/{id}',[MyController::class,'show'])->where('id','[0-9]+');
+
+Route::get('/products/{id}',[MyController::class,'show'])->where('id','[0-9]+');
