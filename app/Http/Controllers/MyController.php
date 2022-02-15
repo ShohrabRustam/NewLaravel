@@ -16,6 +16,7 @@ class MyController extends Controller
       }
 
       public function about(){
+          print_r(route('about'));
           $title="Passing that text on view <br>";
           return view('about');
       }
@@ -56,4 +57,6 @@ class MyController extends Controller
               'products'=>$data[$name] ?? 'products '.$name." does not exit"
           ]);
       }
+
+
 }

@@ -29,7 +29,7 @@ Route::get('/',[MyController::class,'index']);
 
 // });
 
-Route::get('about',[MyController::class,'about']);
+Route::get('about',[MyController::class,'about'])->name('about');
 
 // Route::get('/creater', function () {
 //     return env('CREATER_NAME');
