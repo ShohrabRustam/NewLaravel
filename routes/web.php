@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\pagesController;
 
 /*
 |--------------------------------------------------------------------------\
@@ -80,3 +81,10 @@ Route::get('/products/{name}/{id}',[MyController::class,'show'])->where([
     'name'=>'[a-zA-Z]+',
     'id'=>'[0-9]+'
     ]);
+
+
+    // code for the about controller 
+Route::get('/home',  [pagesController::class, 'index']);
+Route::get('/about',  [pagesController::class, 'about']);
+Route::get('/portfolia',  [pagesController::class, 'portfolia']);
+Route::get('/contact',  [pagesController::class, 'contact']);
