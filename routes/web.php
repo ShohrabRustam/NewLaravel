@@ -74,4 +74,9 @@ Route::get('/products/{name}',[MyController::class,'show']);
 //pattern integer
 Route::get('/products/{id}',[MyController::class,'show'])->where('id','[0-9]+');
 
-Route::get('/products/{id}',[MyController::class,'show'])->where('id','[0-9]+');
+//pattern both int and string 
+
+Route::get('/products/{name}/{id}',[MyController::class,'show'])->where([
+    'name'=>'[a-zA-Z]+',
+    'id'=>'[0-9]+'
+    ]);
